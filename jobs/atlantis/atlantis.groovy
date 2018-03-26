@@ -1,5 +1,5 @@
 def atlantis_envs = [
-            'prod':'nomad.jrasell.com',
+            'prod':'10.135.204.41:4646',
             'nonprod':'nomad.np.jrasell.com'
             ]
 

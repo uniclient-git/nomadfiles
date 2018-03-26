@@ -1,6 +1,6 @@
 node {
     ansiColor('xterm') {
-        git url: 'git@github.com:jrasell/nomadfiles.git'
+        //git url: 'git@github.com:jrasell/nomadfiles.git'
         def levant_docker = docker.image('jrasell/levant:0.0.4')
         levant_docker.pull()
 
@@ -11,7 +11,7 @@ node {
         levant_docker.inside {
               sh """
               levant deploy\
-              -address=http://${nomad_url}:4646\
+              -address=http://10.135.204.41:4646\
               -var-file=./variables/${nomad_env}/atlantis.yaml\
               ./jobs/${nomad_job}/${nomad_job}.nomad
               """
